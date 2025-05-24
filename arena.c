@@ -121,6 +121,8 @@ void arena_debug_memory(arena arena, int col) {
   printf("\n");
 }
 
+void arena_destroy(arena arena) { free(arena.buffer); }
+
 void arena_debug_regions(arena arena) {
   region *reg = (region *)arena.buffer;
 
